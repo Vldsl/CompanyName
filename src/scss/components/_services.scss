@@ -1,0 +1,98 @@
+.services {
+	padding: rem(150) 0;
+
+	@include mq("tablet-small", max) {
+		padding: rem(50) 0;
+	}
+
+	&__container {}
+
+	&__title {
+		margin: 0 0 rem(100) 0;
+
+		@include mq("phone-wide", max) {
+			margin: 0 0 rem(60) 0;
+		}
+	}
+
+	&__inner {
+		@include mq("tablet-small") {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 rem(-15);
+		}
+	}
+
+	&__column {
+		flex: 0 1 33.333%;
+
+		@include mq("tablet-small") {
+			padding: 0 15px;
+		}
+
+		@include mq(tablet, max) {
+			& {
+				flex: 0 1 50%;
+			}
+
+			&:not(:last-child) {
+				margin: 0 0 50px 0;
+			}
+
+			&:last-child {
+				flex: 1 1 100%;
+			}
+		}
+	}
+
+	&__item {}
+}
+
+.item-services {
+	padding: rem(60) rem(25) rem(30);
+	border: 2px solid $grey;
+	position: relative;
+	text-align: center;
+	transform: translate(0, 120%);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+
+	&._active {
+		transform: translate(0, 0);
+		opacity: 1;
+		transition: all 0.8s ease 0.4s;
+	}
+
+	&:before,
+	&:after {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	&:before {
+		content: "";
+		width: rem(65);
+		height: rem(65);
+		border-radius: 50%;
+		background-color: $green-primary;
+	}
+
+	&:after {
+		text-align: center;
+		font-size: rem(25);
+		line-height: math.div(65, 25);
+		color: $white;
+		@extend %ic;
+	}
+
+	&__title {
+		margin: 0 0 rem(25) 0;
+		@include font-source-sans(rem(18), 1.1, 700, $black);
+	}
+
+	&__text {
+		@include font-source-sans(rem(16), 1.5);
+	}
+}

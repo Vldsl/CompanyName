@@ -1,0 +1,135 @@
+.clients {
+	padding: rem(80) 0 rem(80) 0;
+
+	@include mq("tablet-small", max) {
+		padding: rem(30) 0 rem(100) 0;
+	}
+
+	&__container {}
+
+	&__title {
+		margin: 0 0 rem(50) 0;
+
+		@include mq("tablet-small", max) {
+			margin: 0 0 rem(30) 0;
+		}
+	}
+
+	&__inner {
+		transform: translate(-120%, 0);
+		opacity: 0;
+		transition: all 0.8s ease 0.4s;
+		display: grid;
+		grid-gap: 40px;
+		grid-template-columns: auto;
+		grid-auto-rows: 20px;
+		grid-auto-flow: row dense;
+		position: relative;
+
+		&._active {
+			transform: translate(0, 0);
+			opacity: 1;
+		}
+
+		@include mq("tablet-small") {
+			margin: 0 rem(-15);
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	&__item {}
+}
+
+.item-clients {
+	margin: 0 0 rem(35) 0;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	&.item-clients_ready {
+		position: static;
+		height: auto;
+		width: auto;
+	}
+
+	@include mq("tablet-small") {
+		padding: 0 rem(15);
+		width: 50%;
+	}
+
+	@include mq("tablet-small", max) {
+		&:nth-child(2n) {
+			.item-clients__profile {
+				flex-direction: row-reverse;
+				text-align: left;
+				justify-content: start;
+			}
+
+			.item-clients__text {
+				&:after {
+					left: 23px;
+				}
+			}
+		}
+
+		&:nth-child(2n+1) {
+			.item-clients__profile {
+				text-align: right;
+			}
+
+			.item-clients__text {
+				&:after {
+					right: 23px;
+				}
+			}
+		}
+	}
+
+	&__text {
+		padding: rem(30);
+		margin: 0 0 rem(20) 0;
+		border: 2px solid $grey;
+		position: relative;
+		@include font-source-sans(rem(20), 1.4);
+
+		@include mq("phone-wide", max) {
+			padding: rem(15);
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: -5px;
+			right: 23px;
+			width: rem(10);
+			height: rem(10);
+			background-color: $white;
+			border-bottom: 2px solid $grey;
+			border-right: 2px solid $grey;
+			transform: rotate(45deg);
+		}
+	}
+
+	&__profile {
+		display: flex;
+		align-items: center;
+		justify-content: end;
+		text-align: right;
+		gap: rem(30);
+	}
+
+	&__info {}
+
+	&__name {
+		@include font-source-sans(rem(18), 1.1, $black, 700);
+	}
+
+	&__prof {}
+
+	&__img {
+		width: rem(60);
+		height: rem(60);
+		border-radius: 50%;
+	}
+}

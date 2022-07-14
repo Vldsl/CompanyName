@@ -1,0 +1,84 @@
+/* -------------------------------- */
+//Percent
+@function percent($px, $from) {
+	$result: math.div($px, $from) * 100%;
+	@return $result;
+}
+
+//REM
+@function rem($px) {
+	$result: math.div($px, 16)+rem;
+	@return $result;
+}
+
+//EM
+@function em($px, $current: 16) {
+	$result: math.div($px, $current)+em;
+	@return $result;
+}
+
+//line height
+@function llh($px, $current: 16) {
+	$result: math.div($px, $current);
+	@return $result;
+}
+
+/* -------------------------------- */
+@mixin font-source-sans($size: false, $lh: false, $weight: 400, $colour: false) {
+	@if $size {
+		font-size: $size;
+	}
+
+	@if $lh {
+		line-height: $lh;
+	}
+
+	@if $weight {
+		font-weight: $weight;
+	}
+
+	@if $colour {
+		color: $colour;
+	}
+}
+
+/* -------------------------------- */
+$breakpoints: (
+	"phone": em(320),
+	"phone-wide": em(480),
+	"phablet": em(600),
+	"tablet-small": em(768),
+	"tablet": em(991),
+	"tablet-wide": em(1024),
+	"desktop": em(1248),
+	"desktop-wide": em(1440),
+);
+
+@mixin mq($width, $type: min, $maxWidth: false) {
+	@if map-has-key($breakpoints, $width) {
+		$width: map-get($breakpoints, $width);
+		$maxWidth: map-get($breakpoints, $maxWidth);
+
+		@if $type ==min or $type ==max {
+			@media only screen and (#{$type}-width: $width) {
+				@content;
+			}
+		}
+
+		@else if $type ==range {
+			@media (min-width: $width) and (max-width: $maxWidth) {
+				@content;
+			}
+		}
+
+		@else {
+			@error 'Не указано значение для `#{$type}`';
+		}
+	}
+
+	@else {
+		@error 'Не указано значение для `#{$breakpoints}`';
+	}
+}
+
+//========================================================================================================================================================

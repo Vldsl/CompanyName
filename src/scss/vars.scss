@@ -1,0 +1,70 @@
+$fontSize: 16;
+$fontFamily: "Montserrat", sans-serif;
+// $fontSecondary: "STIX Two Text", serif;
+
+//========================================================================================================================================================
+$grey-primary: #444;
+$grey-secondary: #353535;
+$dark-primary: #232323;
+$black: #000;
+$white: #fff;
+$green-primary: #36c36e;
+$grey: #f2f2f2;
+// $green: #198754;
+// $red: #dc3545;
+// $bgbody: #f9f9f9;
+// $bgsection: #ebebeb;
+// $grey: #c4c4c4;
+
+$font-primary: "Lato", sans-serif;
+$font-secondary: "Raleway", sans-serif;
+$font-cabin: "Cabin", sans-serif;
+$font-poiretone: "PoiretOne", sans-serif;
+$font-montserrat: "Montserrat", sans-serif;
+$font-myriadpro: "MyriadPro", sans-serif;
+//========================================================================================================================================================
+
+
+
+// $white-primary: #fff;
+// $white-secondary: #f9f9f9;
+// $grey-primary: #8a8a8a;
+$grey-secondary: #5c5c5c;
+// $red: #da4533;
+// $black: #1b1b1b;
+
+$primaryColor: $grey-primary;
+// $secondaryColor: $grey-secondary;
+// $tertiaryColor: $white-secondary;
+// $brandColor: $red;
+// $primaryAccentColor: $white-primary;
+// $secondaryAccentColor: $black;
+
+// /*--------------------*/
+// /*** Fonts ***/
+// @mixin font-face($font-family, $ff-local, $url, $weight, $style: normal) {
+// 	@font-face {
+// 		font-family: "#{$font-family}";
+// 		src: url("#{$url}.eot");
+// 		src: local("#{$ff-local}"),
+// 		local("#{$url}"),
+// 		url("#{$url}.eot?#iefix") format("embedded-opentype"),
+// 		url("../fonts/#{$url}.woff2") format("woff2"),
+// 		url("../fonts/#{$url}.woff") format("woff"),
+// 		url("#{$url}.ttf") format("truetype");
+// 		font-weight: #{$weight};
+// 		font-style: $style;
+// 		font-display: swap;
+// 	}
+// }
+
+// @include font-face("Lato", "Lato Light", "Lato-Light", 300);
+// @include font-face("Lato", "Lato Regular", "Lato-Regular", 400);
+// @include font-face("Lato", "Lato Bold", "Lato-Bold", 700);
+// @include font-face("Raleway", "Raleway", "Raleway-Regular", 400);
+// @include font-face("Raleway", "Raleway Bold", "Raleway-Bold", 700);
+// @include font-face("Montserrat", "Montserrat Regular", "Montserrat-Regular", 400);
+// @include font-face("Cabin", "Cabin Regular", "Cabin-Regular", 400);
+// @include font-face("Poiret One", "Poiret One", "PoiretOne-Regular", 400);
+// @include font-face("Myriad Pro", "Myriad Pro Condensed", "MyriadPro-Cond", 400);
+// /*--------------------*/

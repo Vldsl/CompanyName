@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+	head
+	@@include('html/head.pug', {
+		"title": "CompanyName"
+	})
+	body(style="background-color: #fff;")
+		.wrapper
+			include html/header
+			main.page
+				include html/intro
+				include html/services
+				include html/about
+				include html/clients
+				include html/portfolio
+				include html/blog
+				include html/action
+			include html/footer
+
+		script(src="js/app.min.js")
+
+
+<!-- Исправить шрифты -->
+<!-- Сделать tool tip кнопке contact -->
+
+//- Запушить на GitHub

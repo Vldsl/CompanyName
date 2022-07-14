@@ -1,0 +1,40 @@
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+[class*="_icon-"] {
+	&:before {
+		@extend %ic;
+		display: block;
+	}
+}
+
+._icon-calendar:before {
+	content: "\e903";
+}
+
+._icon-chat:before {
+	content: "\e904";
+}
+
+._icon-brush:before,
+._icon-brush:after {
+	content: "\e900";
+}
+
+._icon-flag:before,
+._icon-flag:after {
+	content: "\e901";
+}
+
+._icon-user:before,
+._icon-user:after {
+	content: "\e902";
+}
