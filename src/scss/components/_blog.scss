@@ -66,8 +66,10 @@
 	}
 
 	&__link {
-		&:hover {
-			text-decoration: underline;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 
 		&:not(:last-child) {
@@ -91,8 +93,10 @@
 				margin: 0 0 0 rem(10);
 			}
 
-			&:hover {
-				text-decoration: underline;
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 
 			&:before {

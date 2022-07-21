@@ -108,10 +108,13 @@ body {
 			transition: transform 0.3s cubic-bezier(0.16, 0.73, 0.58, 0.62) 0.3s;
 		}
 
-		&:hover:before,
-		&:hover:after {
-			transform: translateX(0);
-			pointer-events: none;
+		@media (any-hover: hover) {
+
+			&:hover:before,
+			&:hover:after {
+				transform: translateX(0);
+				pointer-events: none;
+			}
 		}
 
 		@include mq("tablet-small", max) {

@@ -41,8 +41,10 @@
 		@include font-source-sans(rem(14), 1.1);
 		color: $white;
 
-		&:hover {
-			text-decoration: underline;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 }
